@@ -1,0 +1,28 @@
+<log4j:event logger="foo.bar" timestamp="1441017911671" level="WARN" thread="0x7f69c2ca67c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441023926867" level="WARN" thread="0x7f29797957c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441024076244" level="WARN" thread="0x7f8c687947c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441024101900" level="WARN" thread="0x7fa1875c87c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441024210227" level="WARN" thread="0x7f34524f87c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441024272740" level="WARN" thread="0x7ffb4068d7c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441024295188" level="WARN" thread="0x7fb524ae87c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+

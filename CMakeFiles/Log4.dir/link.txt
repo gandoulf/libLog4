@@ -1,0 +1,1 @@
+/usr/bin/c++  -fPIC -fpermissive   -shared -Wl,-soname,libLog4.so -o lib/libLog4.so CMakeFiles/Log4.dir/src/log4.cpp.o -lapr-1 -laprutil-1 -llog4cxx 

@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/resse/work/libLog4/example/main.cpp
+log4.hpp
+/home/resse/work/libLog4/example/log4.hpp
+
+/home/resse/work/libLog4/include/log4.hpp
+log4cxx/logger.h
+-
+log4cxx/xml/domconfigurator.h
+-
+log4cxx/basicconfigurator.h
+-
+log4cxx/propertyconfigurator.h
+-
+log4cxx/helpers/exception.h
+-
+

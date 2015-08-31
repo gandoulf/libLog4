@@ -1,0 +1,20 @@
+/*
+ * Copyright (C) 2012 All Right Reserved, Diotasoft 
+ *
+ * Author: Sebastian Knödel
+ * Date: January 2014
+ * Summary: Selltic OpenGL Demo
+ *
+ */
+
+#include "log4.hpp"
+
+int main(int argc, char **argv)
+{
+	Log4 log("test");
+	log.initLogger();
+	log.addLogger(&(std::string("normal")));
+	log.initXML(NULL);
+	log.useLogger(&(std::string("normal")), &(std::string("hello world")), INFO);
+	return (0);
+}
