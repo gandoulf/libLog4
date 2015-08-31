@@ -26,3 +26,27 @@
 <log4j:message><![CDATA[warning append]]></log4j:message>
 </log4j:event>
 
+<log4j:event logger="foo.bar" timestamp="1441029255398" level="WARN" thread="0x7fc2893647c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441029540222" level="WARN" thread="0x7fac4c1267c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441029555999" level="WARN" thread="0x7f42496ce7c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441029582983" level="WARN" thread="0x7f41ce2927c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441029710846" level="WARN" thread="0x7fd0797567c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+
+<log4j:event logger="foo.bar" timestamp="1441031555255" level="WARN" thread="0x7fc0d956e7c0">
+<log4j:message><![CDATA[warning append]]></log4j:message>
+</log4j:event>
+

@@ -23,14 +23,14 @@ class Log4
  public:
   
   Log4();
-  Log4(char *);
+  Log4(std::string);
   ~Log4();
   int	initLogger();
-  void	initXML(std::string *);
-  void	initLogFile(std::string *);
-  int	addLogger(std::string *);
-  void	useLogger(std::string *, std::string *, int);
-  LoggerPtr	*getLogger(std::string *);
+  void	initXML(std::string);
+  void	initLogFile(std::string);
+  int	addLogger(std::string);
+  void	useLogger(std::string, std::string, int);
+  LoggerPtr	getLogger(std::string);
   
  private:
 

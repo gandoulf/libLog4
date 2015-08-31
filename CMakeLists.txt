@@ -8,8 +8,8 @@ set(CMAKE_LIBRARY_OUTPUT_DIRECTORY "./lib")
 
 include_directories ("${Log4_include}")
 
-SET(CMAKE_EXE_LINKER_FLAGS "-fpermissive")
-SET(CMAKE_CXX_FLAGS "-fpermissive")
+SET(CMAKE_EXE_LINKER_FLAGS "-g -fpermissive")
+SET(CMAKE_CXX_FLAGS "-g -fpermissive")
 
 SET(SOURCES src/log4.cpp)
 

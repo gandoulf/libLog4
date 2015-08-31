@@ -11,8 +11,6 @@ log4.hpp
 /home/resse/work/libLog4/src/log4.hpp
 stdlib.h
 -
-iostream
--
 
 include/log4.hpp
 log4cxx/logger.h

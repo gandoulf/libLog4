@@ -16,16 +16,17 @@ int main(int argc, char **argv)
 	std::string log1("logger");
 
 	log.initLogger();
-	log.initXML(NULL);
-	log.addLogger(&log1);
-	log.addLogger(&(std::string ("foo")));
-	log.addLogger(&(std::string ("foo.bar")));
-	log.useLogger(NULL, &message, FATAL);
-	log.useLogger(NULL, NULL, 9);
-	log.useLogger(&(std::string("logger")), NULL, 9);
-	log.useLogger(&log1, &message, WARN);
-	log.useLogger(&(std::string ("foo")), &(std::string ("just a warning output created by foo")), WARN);
-	log.useLogger(&(std::string ("foo.bar")), &(std::string ("nothing happenning")), TRACE);
-	log.useLogger(&(std::string ("foo.bar")), &(std::string ("warning append")), WARN);
+	log.initXML("");
+	log.addLogger(log1);
+	log.addLogger("foo");
+	log.addLogger("foo.bar");
+	log.useLogger("", message, FATAL);
+	log.useLogger( "", "", 9);
+	log.useLogger("logger", "", 9);
+	log.useLogger(log1, message, WARN);
+	log.useLogger("foo", "just a warning output created by foo", WARN);
+	log.useLogger("foo.bar", "nothing happenning", TRACE);
+	log.useLogger("foo.bar", "warning append", WARN);
+	LOG4CXX_FATAL(log.getLogger("foo"), "yoloooooooo");
 	return (0);
 }

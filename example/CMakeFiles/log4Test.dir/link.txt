@@ -1,1 +1,1 @@
-/usr/bin/c++   -fpermissive  -fpermissive CMakeFiles/log4Test.dir/main.cpp.o  -o log4Test  -L/home/resse/work/libLog4/lib -rdynamic -lLog4 -Wl,-rpath,/home/resse/work/libLog4/lib 
+/usr/bin/c++   -g -fpermissive  -g -fpermissive CMakeFiles/log4Test.dir/main.cpp.o  -o log4Test  -L/home/resse/work/libLog4/lib -rdynamic -lLog4 -lapr-1 -laprutil-1 -llog4cxx -Wl,-rpath,/home/resse/work/libLog4/lib 

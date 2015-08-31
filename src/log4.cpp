@@ -1,9 +1,8 @@
 #include "log4.hpp"
 #include <stdlib.h>
-#include <iostream>
 
 
-Log4::Log4(char *name): log4Name(name)
+Log4::Log4(std::string name): log4Name(name)
 {
   for (int i = 0; i <= 4; ++i)
     logCall[i] = 0;
@@ -65,68 +64,68 @@ int	Log4::initLogger()
   loggerName[1] = NULL;
 }
 
-void	Log4::initXML(std::string *file)
+void	Log4::initXML(std::string file)
 {
-  if (file == NULL)
-	 DOMConfigurator::configure("log4/Log4cxxConfig.xml");
+  if (file.size() == 0)
+    DOMConfigurator::configure("log4/Log4cxxConfig.xml");
   else
-    DOMConfigurator::configure(*file);
+    DOMConfigurator::configure(file);
 }
 
-void	Log4::initLogFile(std::string *file)
+void	Log4::initLogFile(std::string file)
 {
-  if (file == NULL)
-	 PropertyConfigurator::configure("C:/document/log4ex/lp-log4cxx-master/examples/CinderProject/assets/log4j.properties");
+  if (file.size() == 0)
+    PropertyConfigurator::configure("C:/document/log4ex/lp-log4cxx-master/examples/CinderProject/assets/log4j.properties");
   else
-    PropertyConfigurator::configure(*file);
+    PropertyConfigurator::configure(file);
 }
-int	Log4::addLogger(std::string *logName)
+int	Log4::addLogger(std::string logName)
 {
   int	i;
 
-  if (logName == NULL)
+  if (logName.size() == 0)
     return (0);
   i = getLoggerNbr();
   if ((logger = (LoggerPtr **)realloc(logger, sizeof(LoggerPtr *) * (i + 1))) == 0)
     return (-1);
   if ((loggerName = (std::string **)realloc(loggerName, sizeof( std::string *) * (i+ 1))) == 0)
     return (-1);
-  logger[i - 1] = new LoggerPtr(Logger::getLogger(*logName));
-  loggerName[i - 1] = new std::string(*logName);
+  logger[i - 1] = new LoggerPtr(Logger::getLogger(logName));
+  loggerName[i - 1] = new std::string(logName);
   logger[i] = NULL;
   loggerName[i] = NULL;
   return (1);
 }
 
-void	Log4::useLogger(std::string *logName, std::string *message, int force)
+void	Log4::useLogger(std::string logName, std::string message, int force)
 {
   int	i;
   
   if (force < 0 || force > 5)
     force = 0;
-  if (logName != NULL && message == NULL)
+  if (logName.size() != 0 && message.size() == 0)
     {
-      i = searchLogger(logName);
+      i = searchLogger(&logName);
       (*this.*report[force])(i, &(std::string ("no message to display")));
     }
-  else if (logName == NULL && message == NULL)
+  else if (logName.size() == 0 && message.size() == 0)
     {
       (*this.*report[force])(0, &(std::string ("no logger and no message to display")));
     }
-  else if (logName == NULL)
+  else if (logName.size() == 0)
     {
-      (*this.*report[force])(0, message);
+      (*this.*report[force])(0, &message);
     }
   else
     {
-      i = searchLogger(logName);
-      (*this.*report[force])(i, message);
+      i = searchLogger(&logName);
+      (*this.*report[force])(i, &message);
     }
 }
 
-LoggerPtr	*Log4::getLogger(std::string *Name)
+LoggerPtr	Log4::getLogger(std::string Name)
 {
-  return (logger[searchLogger(Name)]);
+  return (logger[searchLogger(&Name)][0]);
 }
 
 /* private function */
