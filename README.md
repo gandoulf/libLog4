@@ -1,0 +1,1 @@
+libLog4 simple extention to log4cxx
